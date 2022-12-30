@@ -1,0 +1,79 @@
+/* Reset */
+*,
+*::before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    /******** Custom properties **********/
+
+    /* 1. Main color */
+    --primary-color:#014d4e;
+    
+    /* 2. Secondary color */
+    --secondary-color:#ff9408;
+
+    /* 3. Secondary modified color */
+    --secondary-color-m:#ff94088e;
+
+    /* 4. Tertiary color */
+    --tertiary-color:#017374;
+
+    /* 5. Tertiary modified color */
+    --tertiary-color-n:#01727498;
+}
+
+body{
+    font-family: "Baloo Tamma 2",cursive;
+    line-height: 1.8;
+    display: flex;
+}
+
+/*--------------------------------- Main Styling ---------------------------------*/
+
+
+/********** Side nav **********/
+aside#side-nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+div.side-nav__content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+div.side-nav__content--logo img{
+    width: calc(3vw + 3vh);
+    object-fit: cover;
+}
+
+ul.side-nav__content--social{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+ul.side-nav__content--social a i {
+    font-size: calc(1rem + 0.66667vw);
+    padding-bottom: calc(1rem + 0.66667vw);
+    color: white;
+}
+
+ul.side-nav__content--social a i:hover,
+ul.side-nav__content--social a i:active{
+    color: var(--secondary-color);
+    transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
